@@ -10,7 +10,6 @@ import tensorflow as tf
 from solver_3ddpc import Solver3DDPC
 from opticstools import _genGrid
 # tf.config.set_visible_devices([], 'GPU') # cpu only
-from multiprocessing import Pool
 
 pi    = np.pi
 naxis = np.newaxis
@@ -28,7 +27,7 @@ class DesignMotion3DDPCIllumination(Solver3DDPC):
             self.is_noise = False
             intensity_coef = 1.0
 
-        # calibration may be needed
+        # calibration will be needed for your setup!
         self.intensity_coef = intensity_coef
         self.sensor_gain = 2.87
         self.source_to_intensity_ratio = 65.2 * intensity_coef
