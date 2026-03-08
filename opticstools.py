@@ -75,7 +75,7 @@ def genZernikeAberration(shape, pixel_size, NA, wavelength, z_coeff = [1], z_ind
         zernike_poly         = np.zeros([shape[0], shape[1]], dtype = np_complex_datatype)
         for k in range((n-abs(m))//2+1):
             zernike_poly[:, :]  += ((-1)**k * factorial(n-k))/ \
-                                    (factorial(k)*factorial(0.5*(n+m)-k)*factorial(0.5*(n-m)-k))\
+                                    (factorial(k)*factorial(int(0.5*(n+m)-k))*factorial(int(0.5*(n-m)-k)))\
                                     * rho**(n-2*k)
 
         return normalization_coeff * zernike_poly * azimuthal_function
