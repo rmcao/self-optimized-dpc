@@ -24,7 +24,7 @@ self.readout_noise_std = 1.35
 
 ## Example patterns
 
-The final patterns used in our paper is attached in `optimized_4patterns.json` as a reference. The optimization is for our 40x, 0.65 NA system.
+The final patterns used in our paper is attached in `optimized_4patterns.json` as a reference. I made this in Oct 2020 for our 40x, 0.65 NA system.
 
 ## Paper
 
